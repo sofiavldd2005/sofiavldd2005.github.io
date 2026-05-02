@@ -28,7 +28,7 @@ pub fn Resume() -> impl IntoView {
 
             <div style="text-align: center;">
                 // Make sure your PDF is inside the 'public' folder of your project!
-                <a href="/Sofia_Duarte_CV.pdf" download="Sofia_Duarte_CV.pdf" class="download-btn">
+                <a href="/assets/Sofia_Duarte_CV.pdf" download="Sofia_Duarte_CV.pdf" class="download-btn">
                     "Download Full CV"
                 </a>
             </div>
