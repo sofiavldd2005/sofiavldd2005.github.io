@@ -6,10 +6,10 @@ pub fn Resume() -> impl IntoView {
         <style>
             "
             .resume { border: 2px solid var(--green); }
-            .resume h2 { color: var(--green); margin: 0 0 1.5rem 0; text-align: center; font-size: 1.8rem; }
+            .resume h2 { color: var(--green); margin: 0 0 1.5rem 0; text-align: center; font-size: 1.8rem;text-align: center }
             .resume-grid { display: grid; gap: 3rem; }
             @media (min-width: 768px) { .resume-grid { grid-template-columns: 1fr 1fr; } }
-            .section-heading { border-bottom: 1px solid var(--surface-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.2rem; margin-top: 0; }
+            .section-heading { border-bottom: 1px solid var(--surface-border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-size: 1.2rem; margin-top: 0; text-align: center}
             .col-left .section-heading { color: var(--yellow); }
             .col-right .section-heading { color: var(--red); }
             .experience-list { list-style-type: none; padding: 0; margin: 0; }

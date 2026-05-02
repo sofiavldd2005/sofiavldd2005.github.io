@@ -1,7 +1,7 @@
 use crate::home::Home;
 use crate::resume::Resume;
 use leptos::prelude::*;
-use leptos_router::components::{A, Route, Router, Routes};
+use leptos_router::components::{Route, Router, Routes};
 use leptos_router::path;
 
 #[component]
