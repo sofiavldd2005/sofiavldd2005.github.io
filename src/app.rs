@@ -1,5 +1,6 @@
-use crate::home::Home;
-use crate::resume::Resume;
+use crate::pages::home::Home;
+use crate::pages::projects::Projects;
+use crate::pages::resume::Resume;
 use leptos::prelude::*;
 use leptos_router::components::{Route, Router, Routes};
 use leptos_router::path;
@@ -32,7 +33,7 @@ pub fn App() -> impl IntoView {
              }
             .container { max-width: 950px; margin: 0 auto; padding: 3rem 1.5rem; }
             .header { border-bottom: 2px dashed var(--pink); padding-bottom: 2rem; margin-bottom: 3rem; text-align: center; }
-            .header h1 { color: var(--pink); font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.5rem 0; line-height: 1.2; }
+            .header h1 { color: var(--mauve); font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.5rem 0; line-height: 1.2; }
             .header p { color: var(--subtext); font-size: 1.1rem; font-style: italic; margin: 0; }
             
             /* Nav bar styling */
@@ -42,6 +43,10 @@ pub fn App() -> impl IntoView {
             .nav-link.home:hover { background-color: rgba(203, 166, 247, 0.1); }
             .nav-link.resume { color: var(--green); border: 1px solid var(--green); }
             .nav-link.resume:hover { background-color: rgba(166, 227, 161, 0.1); }
+            .nav-link.projects { color: var(--red); border: 1px solid var(--red); }
+            .nav-link.projects:hover { background-color: rgba(210, 15, 57, 0.1) }
+
+
 
             /* Card styling reused across pages */
             .card { background-color: var(--mantle); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
@@ -52,12 +57,13 @@ pub fn App() -> impl IntoView {
             <main>
                 <div class="container">
                     <header class="header">
-                        <h1>"✨ Sofia Duarte's Mission Control ✨"</h1>
-                        <p>"Aerospace Engineering @ IST 🚀 | RED Rocketry | Embedded Rustacean 🦀"</p>
+                        <h1>"✨ My personal Webpage ✨"</h1>
+                        <p>"Aerospace Engineering @ IST | RED Rocketry | Embedded Rustacean "</p>
 
                         <nav class="nav-bar">
                             <a href="/" class="nav-link home">"👾Home"</a>
-                            <a href="/resume" class="nav-link resume">"📄 Resume"</a>
+                            <a href="/resume" class="nav-link resume">"Resume"</a>
+                            <a href="/projects" class="nav-link projects"> "Projects" </a>
                         </nav>
                     </header>
 
@@ -65,6 +71,7 @@ pub fn App() -> impl IntoView {
                     <Routes fallback=|| view! { <h2>"404 - Page not found in this orbit."</h2> }>
                         <Route path=path!("/") view=Home />
                         <Route path=path!("/resume") view=Resume />
+                        <Route path=path!("/projects") view=Projects />
                     </Routes>
                 </div>
             </main>

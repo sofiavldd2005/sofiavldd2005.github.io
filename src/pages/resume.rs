@@ -40,7 +40,7 @@ pub fn Resume() -> impl IntoView {
 
             <div class="resume-grid">
                 <div class="col-left">
-                    <h3 class="section-heading">"🚀 Flight & Space Systems"</h3>
+                    <h3 class="section-heading">"Flight & Space Systems"</h3>
                     <ul class="experience-list">
                         <li>
                             <span class="role-title">"Co-Team Leader @ RED Electronics"</span>
@@ -52,7 +52,7 @@ pub fn Resume() -> impl IntoView {
                         </li>
                     </ul>
 
-                    <h3 class="section-heading" style="margin-top: 2rem;">"🦀 Open Source & Projects"</h3>
+                    <h3 class="section-heading" style="margin-top: 2rem;">"Open Source & Projects"</h3>
                     <ul class="experience-list">
                         <li>
                             <span class="role-title">"Rust HIL & Ground Station Framework"</span>
@@ -62,13 +62,13 @@ pub fn Resume() -> impl IntoView {
                 </div>
 
                 <div class="col-right">
-                    <h3 class="section-heading">"💻 Hardware & Embedded"</h3>
+                    <h3 class="section-heading">"Hardware & Embedded"</h3>
                     <div class="skills-container">
                         <SkillBadge text="C/C++" /><SkillBadge text="Embedded Rust" /><SkillBadge text="RISC-V" />
                         <SkillBadge text="STM32 & ESP32" /><SkillBadge text="FreeRTOS" /><SkillBadge text="KiCad" />
                     </div>
 
-                    <h3 class="section-heading" style="margin-top: 2.5rem;">"⚙️ Systems & Analysis"</h3>
+                    <h3 class="section-heading" style="margin-top: 2.5rem;">"Systems & Analysis"</h3>
                     <div class="skills-container">
                         <SkillBadge text="Async/Await (Embassy)" /><SkillBadge text="Python" /><SkillBadge text="MATLAB" />
                         <SkillBadge text="GitHub Actions CI/CD" /><SkillBadge text="Linux/Bash" />

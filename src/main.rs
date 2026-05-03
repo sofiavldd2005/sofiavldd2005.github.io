@@ -1,7 +1,5 @@
 mod app;
-mod home;
-mod resume;
-
+mod pages;
 use app::App;
 use leptos::mount::mount_to_body;
 use leptos::prelude::*;
