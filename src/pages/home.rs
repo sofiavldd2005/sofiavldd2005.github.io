@@ -37,6 +37,23 @@ pub fn Home() -> impl IntoView {
             .social-btn.email:hover { border-color: var(--red); color: var(--red); }
             .social-btn.github:hover { border-color: var(--mauve); color: var(--mauve); }
             .social-btn.linkedin:hover { border-color: var(--green); color: var(--green); }
+            .photo-credit {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                background-color: rgba(30, 30, 46, 0.65);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid var(--surface-border, rgba(255,255,255,0.1));
+                border-radius: 8px;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+                color: var(--text);
+                z-index: 50;
+                pointer-events: none; /* Ensures you can still click things underneath it */
+                opacity: 0.5;
+                transition: opacity 0.3s ease;
+            }
             "
         </style>
         <section class="card about">
@@ -61,6 +78,10 @@ pub fn Home() -> impl IntoView {
                     </a>
                 </div>
         </section>
+        <div class="photo-credit">
+                "Spaceship Earth — Photographed by Artemis II in April 2026"
+
+            </div>
         <div class="built-with">
                 "Built with 💖 and "
                 <a href="https://leptos.dev/" target="_blank" rel="noopener noreferrer">"Leptos"</a>

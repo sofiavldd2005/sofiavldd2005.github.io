@@ -5,6 +5,14 @@ pub fn Resume() -> impl IntoView {
     view! {
         <style>
             "
+            body {
+                background: linear-gradient(
+                    rgba(30, 30, 46, 0.85),
+                    rgba(203, 166, 247, 0.15)
+                ), url('/assets/earthrise.jpg') no-repeat center center fixed !important;
+                -webkit-background-size: cover !important;
+                background-size: cover !important;
+            }
             .resume { border: 2px solid var(--green); 
             background-color: rgba(30, 30, 46, 0.55); /* Catppuccin dark base at 65% opacity */
             backdrop-filter: blur(5px); /* Softly blurs the Earthrise image behind the card */
@@ -26,6 +34,23 @@ pub fn Resume() -> impl IntoView {
             
             .download-btn { background-color: var(--pink); color: var(--base); padding: 0.7rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: opacity 0.2s; margin-bottom: 2rem; }
             .download-btn:hover { opacity: 0.8; }
+            .photo-credit {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                background-color: rgba(30, 30, 46, 0.65);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid var(--surface-border, rgba(255,255,255,0.1));
+                border-radius: 8px;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+                color: var(--text);
+                z-index: 50;
+                pointer-events: none; /* Ensures you can still click things underneath it */
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+            }
             "
         </style>
         <section class="card resume">
@@ -76,6 +101,9 @@ pub fn Resume() -> impl IntoView {
                 </div>
             </div>
         </section>
+            <div class="photo-credit">
+                "Earthrise — Photographed by Apollo 8 on Christmas Eve (1968)"
+            </div>
     }
 }
 

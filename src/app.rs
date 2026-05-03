@@ -1,4 +1,5 @@
 use crate::pages::home::Home;
+use crate::pages::not_found::NotFound;
 use crate::pages::projects::Projects;
 use crate::pages::resume::Resume;
 use leptos::prelude::*;
@@ -57,11 +58,11 @@ pub fn App() -> impl IntoView {
             <main>
                 <div class="container">
                     <header class="header">
-                        <h1>"✨ My personal Webpage ✨"</h1>
+                        <h1>"My personal Webpage"</h1>
                         <p>"Aerospace Engineering @ IST | RED Rocketry | Embedded Rustacean "</p>
 
                         <nav class="nav-bar">
-                            <a href="/" class="nav-link home">"👾Home"</a>
+                            <a href="/" class="nav-link home">"Home"</a>
                             <a href="/resume" class="nav-link resume">"Resume"</a>
                             <a href="/projects" class="nav-link projects"> "Projects" </a>
                         </nav>
@@ -72,6 +73,7 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/") view=Home />
                         <Route path=path!("/resume") view=Resume />
                         <Route path=path!("/projects") view=Projects />
+                        <Route path=path!("/*any") view=NotFound/>
                     </Routes>
                 </div>
             </main>
