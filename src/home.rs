@@ -5,9 +5,17 @@ pub fn Home() -> impl IntoView {
     view! {
         <style>
             "
-            .about { border: 2px solid var(--mauve);text-align: center}
-            .about h2 { color: var(--mauve); margin: 0 0 1.5rem 0; text-align: center; font-size: 1.8rem; text-align: center }
-            .about-text { font-size: 1.15rem; line-height: 1.7; max-width: 750px; margin: 0 auto; text-align: center; }
+            .about { border: 2px solid var(--mauve);
+            text-align: center;
+            background-color: rgba(30, 30, 46, 0.55); /* Catppuccin dark base at 65% opacity */
+            backdrop-filter: blur(5px); /* Softly blurs the Earthrise image behind the card */
+            -webkit-backdrop-filter: blur(10px); /* Safari support (when it decides to work!) */
+            border-radius: 16px;
+            padding: 2rem;
+            
+            }
+            .about h2 { color: var(--mauve); margin: 0 0 1.5rem 0; text-align: center; font-size: 1.8rem; text-align: left }
+            .about-text { font-size: 1.15rem; line-height: 1.7; max-width: 750px; margin: 0 auto; text-align: left; }
             /* Social Buttons Styling */
             .socials-container {
                 display: flex;
@@ -35,7 +43,7 @@ pub fn Home() -> impl IntoView {
             <h2>"🌸 About Me:"</h2>
             <div class="about-text">
                 <p>"Hi! I like to build backend systems, write memory-safe code for embedded devices, and develop flight software for rockets!"</p>
-                <p>"Currently architecting hybrid rocket avionics and pushing for Rust adoption in aerospace environments. 🎀"</p>
+                <p>"Currently architecting hybrid rocket avionics and pushing for Rust adoption in aerospace environments."</p>
             </div>
             <div class="reach-me">
                     <h3>"Here is how you can reach me :) "</h3>

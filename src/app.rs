@@ -14,7 +14,22 @@ pub fn App() -> impl IntoView {
                 --pink: #f5c2e7; --mauve: #cba6f7; --green: #a6e3a1; --yellow: #f9e2af;
                 --red: #f38ba8; --surface: #313244; --surface-border: #45475a;
             }
-            body { margin: 0; background-color: var(--base); color: var(--text); font-family: 'Nunito', system-ui, sans-serif; }
+            body {  
+                margin: 0; 
+                
+                /* The Magic Overlay: Catppuccin Base at the top fading into a soft Mauve tint at the bottom */
+                background: linear-gradient(
+                    rgba(30, 30, 46, 0.85), /* Dark overlay to keep text readable */
+                    rgba(203, 166, 247, 0.25) /* Cute mauve/pink tint */
+                ), url('/assets/astronautkristina.jpg');
+                
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed; /* Keeps the background still while you scroll */
+                
+                color: var(--text); 
+                font-family: 'Nunito', system-ui, sans-serif; 
+             }
             .container { max-width: 950px; margin: 0 auto; padding: 3rem 1.5rem; }
             .header { border-bottom: 2px dashed var(--pink); padding-bottom: 2rem; margin-bottom: 3rem; text-align: center; }
             .header h1 { color: var(--pink); font-size: clamp(2rem, 5vw, 2.8rem); margin: 0 0 0.5rem 0; line-height: 1.2; }

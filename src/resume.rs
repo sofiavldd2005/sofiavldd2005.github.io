@@ -5,7 +5,12 @@ pub fn Resume() -> impl IntoView {
     view! {
         <style>
             "
-            .resume { border: 2px solid var(--green); }
+            .resume { border: 2px solid var(--green); 
+            background-color: rgba(30, 30, 46, 0.55); /* Catppuccin dark base at 65% opacity */
+            backdrop-filter: blur(5px); /* Softly blurs the Earthrise image behind the card */
+            border-radius: 16px;
+            padding: 2rem;
+            }
             .resume h2 { color: var(--green); margin: 0 0 1.5rem 0; text-align: center; font-size: 1.8rem;text-align: center }
             .resume-grid { display: grid; gap: 3rem; }
             @media (min-width: 768px) { .resume-grid { grid-template-columns: 1fr 1fr; } }
