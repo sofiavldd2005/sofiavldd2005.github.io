@@ -1,4 +1,5 @@
 use crate::pages::home::Home;
+use crate::pages::iss::Iss;
 use crate::pages::not_found::NotFound;
 use crate::pages::projects::Projects;
 use crate::pages::resume::Resume;
@@ -46,9 +47,8 @@ pub fn App() -> impl IntoView {
             .nav-link.resume:hover { background-color: rgba(166, 227, 161, 0.1); }
             .nav-link.projects { color: var(--red); border: 1px solid var(--red); }
             .nav-link.projects:hover { background-color: rgba(210, 15, 57, 0.1) }
-
-
-
+            .nav-link.iss { color: var(--yellow); border: 1px solid var(--yellow); }
+            .nav-link.iss:hover { background-color: rgba(233, 142, 29, 0.1) }
             /* Card styling reused across pages */
             .card { background-color: var(--mantle); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
             "
@@ -65,6 +65,7 @@ pub fn App() -> impl IntoView {
                             <a href="/" class="nav-link home">"Home"</a>
                             <a href="/resume" class="nav-link resume">"Resume"</a>
                             <a href="/projects" class="nav-link projects"> "Projects" </a>
+                             <a href="/iss" class="nav-link iss"> "Live ISS Tracking" </a>
                         </nav>
                     </header>
 
@@ -73,6 +74,7 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/") view=Home />
                         <Route path=path!("/resume") view=Resume />
                         <Route path=path!("/projects") view=Projects />
+                        <Route path=path!("/iss") view=Iss/> //
                         <Route path=path!("/*any") view=NotFound/>
                     </Routes>
                 </div>
